@@ -1,5 +1,6 @@
 import './App.css'
 import MealCard from './components/MealCard'
+import SearchForm from './components/SearchForm'
 import { MainLayout } from './components/MainLayout'
 
 function App() {
@@ -14,7 +15,12 @@ function App() {
     <MainLayout>
       <div className="py-8">
         <div className="container mx-auto px-4">
-          {/* Single Meal Card */}
+          {/* Search Form */}
+          <div className="mb-12">
+            <SearchForm />
+          </div>
+          
+          {/* Meal Cards */}
           <div className="flex justify-center mb-8">
             <MealCard 
               image={sampleMeal.image}
