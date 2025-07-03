@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://VASE_GITHUB_USERNAME.github.io/react-food-app",
+  "homepage": "https://rev1s0r.github.io/react-food-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
