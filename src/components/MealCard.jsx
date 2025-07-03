@@ -1,7 +1,20 @@
-function MealCard({ children }) {
+import { useNavigate } from 'react-router-dom';
+
+function MealCard({ children, meal }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (meal && meal.idMeal) {
+      navigate(`/meal/${meal.idMeal}`);
+    }
+  };
+
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-sm mx-auto hover:shadow-xl dark:hover:shadow-gray-700/50 transition-shadow duration-300 dark:border dark:border-gray-700">
-    {children}
+    <div 
+      onClick={handleClick}
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden w-full h-full hover:shadow-xl dark:hover:shadow-gray-700/50 transition-all duration-300 dark:border dark:border-gray-700 cursor-pointer transform hover:scale-105"
+    >
+      {children}
     </div>
   );
 }

@@ -122,11 +122,14 @@ export default function Home() {
             {!loading && (
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {meals.map(meal => (
-                            <MealCard>
-                                <img src={meal.strMealThumb} alt={meal.strMeal} />
-                                <div className="p-4">
-                                    <h3>{meal.strMeal}</h3>
+                        {meals.map((meal,index) => (
+                            <MealCard key={meal.idMeal || index} meal={meal}>
+                                <div className="h-48 w-full overflow-hidden">
+                                    <img src={meal.strMealThumb} alt={meal.strMeal} className="w-full h-full object-cover" />
+                                </div>
+                                <div className="p-4 h-24 flex flex-col justify-between">
+                                    <h3 className="text-lg font-bold text-gray-800 dark:text-white line-clamp-2">{meal.strMeal}</h3>
+                                    <p className="text-gray-600 dark:text-gray-300 text-sm">Kliknite pre viac detailov</p>
                                 </div>
                             </MealCard>
                         ))}
