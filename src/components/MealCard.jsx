@@ -2,7 +2,7 @@ function MealCard({ meal }) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-sm mx-auto hover:shadow-xl dark:hover:shadow-gray-700/50 transition-shadow duration-300 dark:border dark:border-gray-700">
       {/* Image */}
-      <div className="h-48 w-full overflow-hidden">
+      <div className="h-48 w-full overflow-hidden" id={meal.idMeal}>
         <img 
           src={meal.strMealThumb} 
           alt={meal.strMeal}
